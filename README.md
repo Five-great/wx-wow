@@ -1,9 +1,11 @@
 # wx-wow
 
+
 该项目为提供微信小程序一套便捷好用动画执行方案， 通过添加简单的动画类名和一些简单的参数，即可实现想要的动画效果。灵感来源 [WOW.js](https://github.com/matthieua/WOW)
 
 wx-wow 需要 调试小程序基础库  `>2.5`
 
+仓库地址： [@Five-great/wx-wow](https://github.com/Five-great/wx-wow)
 
 # 下载
 
@@ -96,4 +98,7 @@ git clone https://github.com/Five-great/wx-wow.git
 
 ## 支持
 
-## 欢迎提出意见
+
+## 欢迎 点赞 ，Fork , 提 Issues
+
+qq邮箱： fivecc@qq.com
