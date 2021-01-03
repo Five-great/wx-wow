@@ -1,12 +1,4 @@
 @charset "UTF-8";
-
-/*!
- * animate.css -http://daneden.me/animate
- * Version - 3.7.0
- * Licensed under the MIT license - http://opensource.org/licenses/MIT
- *
- * Copyright (c) 2018 Daniel Eden
- */
  .wx-wow{
   opacity: 0;
  }
@@ -40,7 +32,7 @@
   }
 }
 
-.animated.bounce {
+.wx-wow.animated.bounce {
   animation-name: bounce;
   transform-origin: center bottom;
 }
@@ -58,7 +50,7 @@
   }
 }
 
-.animated.flash {
+.wx-wow.animated.flash {
   animation-name: flash;
 }
 
@@ -77,7 +69,7 @@
   }
 }
 
-.animated.pulse {
+.wx-wow.animated.pulse {
   animation-name: pulse;
 }
 
@@ -112,7 +104,7 @@
   }
 }
 
-.animated.rubberBand {
+.wx-wow.animated.rubberBand {
   animation-name: rubberBand;
 }
 
@@ -139,7 +131,7 @@
   }
 }
 
-.animated.shake {
+.wx-wow.animated.shake {
   animation-name: shake;
 }
 
@@ -170,7 +162,7 @@
   }
 }
 
-.animated.headShake {
+.wx-wow.animated.headShake {
   animation-timing-function: ease-in-out;
   animation-name: headShake;
 }
@@ -198,7 +190,7 @@
   }
 }
 
-.animated.swing {
+.wx-wow.animated.swing {
   transform-origin: top center;
   animation-name: swing;
 }
@@ -232,7 +224,7 @@
   }
 }
 
-.animated.tada {
+.wx-wow.animated.tada {
   animation-name: tada;
 }
 
@@ -268,7 +260,7 @@
   }
 }
 
-.animated.wobble {
+.wx-wow.animated.wobble {
   animation-name: wobble;
 }
 
@@ -308,7 +300,7 @@
   }
 }
 
-.animated.jello {
+.wx-wow.animated.jello {
   animation-name: jello;
   transform-origin: center;
 }
@@ -335,7 +327,7 @@
   }
 }
 
-.animated.heartBeat {
+.wx-wow.animated.heartBeat {
   animation-name: heartBeat;
   animation-duration: 1.3s;
   animation-timing-function: ease-in-out;
@@ -381,7 +373,7 @@
   }
 }
 
-.animated.bounceIn {
+.wx-wow.animated.bounceIn {
   animation-duration: 0.75s;
   animation-name: bounceIn;
 }
@@ -420,7 +412,7 @@
   }
 }
 
-.animated.bounceInDown {
+.wx-wow.animated.bounceInDown {
   animation-name: bounceInDown;
 }
 
@@ -457,7 +449,7 @@
   }
 }
 
-.animated.bounceInLeft {
+.wx-wow.animated.bounceInLeft {
   animation-name: bounceInLeft;
 }
 
@@ -495,7 +487,7 @@
   }
 }
 
-.animated.bounceInRight {
+.wx-wow.animated.bounceInRight {
   animation-name: bounceInRight;
 }
 
@@ -533,7 +525,7 @@
   }
 }
 
-.animated.bounceInUp {
+.wx-wow.animated.bounceInUp {
   animation-name: bounceInUp;
 }
 
@@ -556,7 +548,7 @@
   }
 }
 
-.animated.bounceOut {
+.wx-wow.animated.bounceOut {
   animation-duration: 0.75s;
   animation-name: bounceOut;
 }
@@ -580,7 +572,7 @@
   }
 }
 
-.animated.bounceOutDown {
+.wx-wow.animated.bounceOutDown {
   animation-name: bounceOutDown;
 }
 
@@ -597,7 +589,7 @@
   }
 }
 
-.animated.bounceOutLeft {
+.wx-wow.animated.bounceOutLeft {
   animation-name: bounceOutLeft;
 }
 
@@ -615,7 +607,7 @@
   }
 }
 
-.animated.bounceOutRight {
+.wx-wow.animated.bounceOutRight {
   animation-name: bounceOutRight;
 }
 
@@ -638,7 +630,7 @@
   }
 }
 
-.animated.bounceOutUp {
+.wx-wow.animated.bounceOutUp {
   animation-name: bounceOutUp;
 }
 
@@ -654,7 +646,7 @@
   }
 }
 
-.animated.fadeIn {
+.wx-wow.animated.fadeIn {
   animation-name: fadeIn;
 }
 
@@ -672,7 +664,7 @@
   }
 }
 
-.animated.fadeInDown {
+.wx-wow.animated.fadeInDown {
   animation-name: fadeInDown;
 }
 
@@ -690,7 +682,7 @@
   }
 }
 
-.animated.fadeInDownBig {
+.wx-wow.animated.fadeInDownBig {
   animation-name: fadeInDownBig;
 }
 
@@ -708,7 +700,7 @@
   }
 }
 
-.animated.fadeInLeft {
+.wx-wow.animated.fadeInLeft {
   animation-name: fadeInLeft;
 }
 
@@ -726,7 +718,7 @@
   }
 }
 
-.animated.fadeInLeftBig {
+.wx-wow.animated.fadeInLeftBig {
   animation-name: fadeInLeftBig;
 }
 
@@ -744,7 +736,7 @@
   }
 }
 
-.animated.fadeInRight {
+.wx-wow.animated.fadeInRight {
   animation-name: fadeInRight;
 }
 
@@ -762,7 +754,7 @@
   }
 }
 
-.animated.fadeInRightBig {
+.wx-wow.animated.fadeInRightBig {
   animation-name: fadeInRightBig;
 }
 
@@ -780,7 +772,7 @@
   }
 }
 
-.animated.fadeInUp {
+.wx-wow.animated.fadeInUp {
   animation-name: fadeInUp;
 }
 
@@ -798,7 +790,7 @@
   }
 }
 
-.animated.fadeInUpBig {
+.wx-wow.animated.fadeInUpBig {
   animation-name: fadeInUpBig;
 }
 
@@ -814,7 +806,7 @@
   }
 }
 
-.animated.fadeOut {
+.wx-wow.animated.fadeOut {
   animation-name: fadeOut;
 }
 
@@ -831,7 +823,7 @@
   }
 }
 
-.animated.fadeOutDown {
+.wx-wow.animated.fadeOutDown {
   animation-name: fadeOutDown;
 }
 
@@ -848,7 +840,7 @@
   }
 }
 
-.animated.fadeOutDownBig {
+.wx-wow.animated.fadeOutDownBig {
   animation-name: fadeOutDownBig;
 }
 
@@ -865,7 +857,7 @@
   }
 }
 
-.animated.fadeOutLeft {
+.wx-wow.animated.fadeOutLeft {
   animation-name: fadeOutLeft;
 }
 
@@ -882,7 +874,7 @@
   }
 }
 
-.animated.fadeOutLeftBig {
+.wx-wow.animated.fadeOutLeftBig {
   animation-name: fadeOutLeftBig;
 }
 
@@ -899,7 +891,7 @@
   }
 }
 
-.animated.fadeOutRight {
+.wx-wow.animated.fadeOutRight {
   animation-name: fadeOutRight;
 }
 
@@ -916,7 +908,7 @@
   }
 }
 
-.animated.fadeOutRightBig {
+.wx-wow.animated.fadeOutRightBig {
   animation-name: fadeOutRightBig;
 }
 
@@ -933,7 +925,7 @@
   }
 }
 
-.animated.fadeOutUp {
+.wx-wow.animated.fadeOutUp {
   animation-name: fadeOutUp;
 }
 
@@ -950,7 +942,7 @@
   }
 }
 
-.animated.fadeOutUpBig {
+.wx-wow.animated.fadeOutUpBig {
   animation-name: fadeOutUpBig;
 }
 
@@ -986,7 +978,7 @@
   }
 }
 
-.animated.flip {
+.wx-wow.animated.flip {
   backface-visibility: visible;
   animation-name: flip;
 }
@@ -1019,7 +1011,7 @@
   }
 }
 
-.animated.flipInX {
+.wx-wow.animated.flipInX {
   backface-visibility: visible !important;
   animation-name: flipInX;
 }
@@ -1052,7 +1044,7 @@
   }
 }
 
-.animated.flipInY {
+.wx-wow.animated.flipInY {
   backface-visibility: visible !important;
   animation-name: flipInY;
 }
@@ -1075,7 +1067,7 @@
   }
 }
 
-.animated.flipOutX {
+.wx-wow.animated.flipOutX {
   animation-duration: 0.75s;
   animation-name: flipOutX;
   backface-visibility: visible !important;
@@ -1099,7 +1091,7 @@
   }
 }
 
-.animated.flipOutY {
+.wx-wow.animated.flipOutY {
   animation-duration: 0.75s;
   backface-visibility: visible !important;
   animation-name: flipOutY;
@@ -1127,7 +1119,7 @@
   }
 }
 
-.animated.lightSpeedIn {
+.wx-wow.animated.lightSpeedIn {
   animation-name: lightSpeedIn;
   animation-timing-function: ease-out;
 }
@@ -1145,7 +1137,7 @@
   }
 }
 
-.animated.lightSpeedOut {
+.wx-wow.animated.lightSpeedOut {
   animation-name: lightSpeedOut;
   animation-timing-function: ease-in;
 }
@@ -1166,7 +1158,7 @@
   }
 }
 
-.animated.rotateIn {
+.wx-wow.animated.rotateIn {
   animation-name: rotateIn;
 }
 
@@ -1186,7 +1178,7 @@
   }
 }
 
-.animated.rotateInDownLeft {
+.wx-wow.animated.rotateInDownLeft {
   animation-name: rotateInDownLeft;
 }
 
@@ -1206,7 +1198,7 @@
   }
 }
 
-.animated.rotateInDownRight {
+.wx-wow.animated.rotateInDownRight {
   animation-name: rotateInDownRight;
 }
 
@@ -1226,7 +1218,7 @@
   }
 }
 
-.animated.rotateInUpLeft {
+.wx-wow.animated.rotateInUpLeft {
   animation-name: rotateInUpLeft;
 }
 
@@ -1246,7 +1238,7 @@
   }
 }
 
-.animated.rotateInUpRight {
+.wx-wow.animated.rotateInUpRight {
   animation-name: rotateInUpRight;
 }
 
@@ -1265,7 +1257,7 @@
   }
 }
 
-.animated.rotateOut {
+.wx-wow.animated.rotateOut {
   animation-name: rotateOut;
 }
 
@@ -1284,7 +1276,7 @@
   }
 }
 
-.animated.rotateOutDownLeft {
+.wx-wow.animated.rotateOutDownLeft {
   animation-name: rotateOutDownLeft;
 }
 
@@ -1303,7 +1295,7 @@
   }
 }
 
-.animated.rotateOutDownRight {
+.wx-wow.animated.rotateOutDownRight {
   animation-name: rotateOutDownRight;
 }
 
@@ -1322,7 +1314,7 @@
   }
 }
 
-.animated.rotateOutUpLeft {
+.wx-wow.animated.rotateOutUpLeft {
   animation-name: rotateOutUpLeft;
 }
 
@@ -1341,7 +1333,7 @@
   }
 }
 
-.animated.rotateOutUpRight {
+.wx-wow.animated.rotateOutUpRight {
   animation-name: rotateOutUpRight;
 }
 
@@ -1374,7 +1366,7 @@
   }
 }
 
-.animated.hinge {
+.wx-wow.animated.hinge {
   animation-duration: 2s;
   animation-name: hinge;
 }
@@ -1402,7 +1394,7 @@
   }
 }
 
-.animated.jackInTheBox {
+.wx-wow.animated.jackInTheBox {
   animation-name: jackInTheBox;
 }
 
@@ -1420,7 +1412,7 @@
   }
 }
 
-.animated.rollIn {
+.wx-wow.animated.rollIn {
   animation-name: rollIn;
 }
 
@@ -1437,7 +1429,7 @@
   }
 }
 
-.animated.rollOut {
+.wx-wow.animated.rollOut {
   animation-name: rollOut;
 }
 
@@ -1453,7 +1445,7 @@
   }
 }
 
-.animated.zoomIn {
+.wx-wow.animated.zoomIn {
   animation-name: zoomIn;
 }
 
@@ -1473,7 +1465,7 @@
   }
 }
 
-.animated.zoomInDown {
+.wx-wow.animated.zoomInDown {
   animation-name: zoomInDown;
 }
 
@@ -1493,7 +1485,7 @@
   }
 }
 
-.animated.zoomInLeft {
+.wx-wow.animated.zoomInLeft {
   animation-name: zoomInLeft;
 }
 
@@ -1513,7 +1505,7 @@
   }
 }
 
-.animated.zoomInRight {
+.wx-wow.animated.zoomInRight {
   animation-name: zoomInRight;
 }
 
@@ -1533,7 +1525,7 @@
   }
 }
 
-.animated.zoomInUp {
+.wx-wow.animated.zoomInUp {
   animation-name: zoomInUp;
 }
 
@@ -1554,7 +1546,7 @@
   }
 }
 
-.animated.zoomOut {
+.wx-wow.animated.zoomOut {
   animation-name: zoomOut;
 }
 
@@ -1575,7 +1567,7 @@
   }
 }
 
-.animated.zoomOutDown {
+.wx-wow.animated.zoomOutDown {
   animation-name: zoomOutDown;
 }
 
@@ -1594,7 +1586,7 @@
   }
 }
 
-.animated.zoomOutLeft {
+.wx-wow.animated.zoomOutLeft {
   animation-name: zoomOutLeft;
 }
 
@@ -1613,7 +1605,7 @@
   }
 }
 
-.animated.zoomOutRight {
+.wx-wow.animated.zoomOutRight {
   animation-name: zoomOutRight;
 }
 
@@ -1634,7 +1626,7 @@
   }
 }
 
-.animated.zoomOutUp {
+.wx-wow.animated.zoomOutUp {
   animation-name: zoomOutUp;
 }
 
@@ -1651,7 +1643,7 @@
   }
 }
 
-.animated.slideInDown {
+.wx-wow.animated.slideInDown {
   animation-name: slideInDown;
 }
 @keyframes slideInLeft {
@@ -1664,7 +1656,7 @@
     transform: translate3d(0, 0, 0);
   }
 }
-.animated.slideInLeft {
+.wx-wow.animated.slideInLeft {
   animation-name: slideInLeft;
 }
 @keyframes slideInRight {
@@ -1676,7 +1668,7 @@
     transform: translate3d(0, 0, 0);
   }
 }
-.animated.slideInRight {
+.wx-wow.animated.slideInRight {
   animation-name: slideInRight;
 }
 @keyframes slideInUp {
@@ -1689,7 +1681,7 @@
     transform: translate3d(0, 0, 0);
   }
 }
-.animated.slideInUp {
+.wx-wow.animated.slideInUp {
   animation-name: slideInUp;
 }
 
@@ -1704,7 +1696,7 @@
   }
 }
 
-.animated.slideOutDown {
+.wx-wow.animated.slideOutDown {
   animation-name: slideOutDown;
 }
 
@@ -1719,7 +1711,7 @@
   }
 }
 
-.animated.slideOutLeft {
+.wx-wow.animated.slideOutLeft {
   animation-name: slideOutLeft;
 }
 
@@ -1736,7 +1728,7 @@
   }
 }
 
-.animated.slideOutRight {
+.wx-wow.animated.slideOutRight {
   animation-name: slideOutRight;
 }
 
@@ -1751,167 +1743,35 @@
   }
 }
 
-.animated.slideOutUp {
+.wx-wow.animated.slideOutUp {
   animation-name: slideOutUp;
 }
 
-.animated {
+.wx-wow.animated {
   animation-duration: 1s;
   animation-fill-mode: both;
 }
 
-.animated.infinite {
+.wx-wow.animated.infinite {
   animation-iteration-count: infinite;
  
 }
 
-.animated.duration-01s {
-  animation-duration: 0.1s;
-}
-.animated.duration-02s {
-  animation-duration: 0.2s;
-}
-.animated.duration-03s {
-  animation-duration: 0.3s;
-}
-.animated.duration-04s {
-  animation-delay: 0.4s;
-}
-.animated.duration-05s {
-  animation-duration: 0.5s;
-}
-.animated.duration-06s {
-  animation-duration: 0.6s;
-}
-.animated.delay-07s {
-  animation-duration: 0.7s;
-}
-.animated.duration-08s {
-  animation-duration: 0.8s;
-}
-.animated.duration-09s {
-  animation-duration: 0.9s;
-}
-.animated.duration-1s {
-  animation-duration: 1s;
-}
-.animated.duration-2s {
-  animation-duration: 2s;
-}
-.animated.duration-3s {
-  animation-duration: 3s;
-}
-.animated.duration-4s {
-  animation-duration: 4s;
-}
-.animated.duration-5s {
-  animation-duration: 5s;
-}
-.animated.duration-6s {
-  animation-duration: 6s;
-}
-.animated.duration-7s {
-  animation-duration: 7s;
-}
-.animated.duration-8s {
-  animation-duration: 8s;
-}
-.animated.duration-9s {
-  animation-duration: 9s;
-}
-
-.animated.duration-10s {
-  animation-duration: 10s;
-}
-.animated.duration-11s {
-  animation-duration: 11s;
-}
-
-
-.animated.delay-00s {
-  animation-delay: 0s;
-}
-
-.animated.delay-01s {
-  animation-delay: 0.1s;
-}
-.animated.delay-02s {
-  animation-delay: 0.2s;
-}
-.animated.delay-03s {
-  animation-delay: 0.3s;
-}
-.animated.delay-04s {
-  animation-delay: 0.4s;
-}
-.animated.delay-05s {
-  animation-delay: 0.5s;
-}
-.animated.delay-06s {
-  animation-delay: 0.6s;
-}
-.animated.delay-07s {
-  animation-delay: 0.7s;
-}
-.animated.delay-08s {
-  animation-delay: 0.8s;
-}
-.animated.delay-09s {
-  animation-delay: 0.9s;
-}
-.animated.delay-1s {
-  animation-delay: 1s;
-}
-
-.animated.delay-2s {
-  animation-delay: 2s;
-}
-
-.animated.delay-3s {
-  animation-delay: 3s;
-}
-
-.animated.delay-4s {
-  animation-delay: 4s;
-}
-
-.animated.delay-5s {
-  animation-delay: 5s;
-}
-.animated.delay-6s {
-  animation-delay: 6s;
-}
-.animated.delay-7s {
-  animation-delay: 7s;
-}
-.animated.delay-8s {
-  animation-delay: 8s;
-}
-.animated.delay-9s {
-  animation-delay: 9s;
-}
-.animated.delay-10s {
-  animation-delay: 10s;
-}
-.animated.delay-11s {
-  animation-delay: 11s;
-}
-
-.animated.fast {
+.wx-wow.animated.fast {
   animation-duration: 800ms;
 }
 
-.animated.faster {
+.wx-wow.animated.faster {
   animation-duration: 500ms;
 }
-.animated.slow {
+.wx-wow.animated.slow {
   animation-duration: 2s;
 }
-.animated.slower {
+.wx-wow.animated.slower {
   animation-duration: 3s;
 }
 @media (prefers-reduced-motion) {
-  .animated {
+  .wx-wow.animated {
     animation: unset !important;
     transition: none !important;
   }
