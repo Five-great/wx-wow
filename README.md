@@ -69,7 +69,7 @@ git clone https://github.com/Five-great/wx-wow.git
 
 ```
 
-### 4. 在需要加入动效的地方的 `class` 加入 `" {{wx.WOW()}}   <动效名称>"`， 例如 `" {{wx.WOW()}} bounceInUp "`， 同时需要给该动效分配一个 `id `具体通过  `{{wx.WOWId()}}`  去自动分配到 `data-wx-wow-id` 上，如下面的例子。
+### 4. 在需要加入动效的地方的 `class` 加入 `" {{wx.WOW()}}   <动效名称>"`， 例如 `" {{wx.WOW()}} bounceInUp "`， 同时需要给该动效分配一个 `id `具体通过  `{{wx.WOWId()}}`  去自动分配到 `data-wx-wow-id` 上 ，并且确保添加动画的display 属性为 块状 或行块状，不能为行类样式 如下面的例子。
 
 ```html
  <view class=" {{wx.WOW()}} bounceInUp"  data-wx-wow-id="{{wx.WOWId()}}" > ... </view>
@@ -95,7 +95,8 @@ git clone https://github.com/Five-great/wx-wow.git
 
 <view class="{{wx.WOW()}} fadeOut"  data-wx-wow-id="{{wx.WOWId()}}"  data-wx-wow-delay="0.8s"  data-wx-wow-duration="3s" > ... </view>
 ```
-
+## Demo
+[点击查看代码片段](https://developers.weixin.qq.com/s/llE4M7m67rnC)
 ## 支持
 
 
