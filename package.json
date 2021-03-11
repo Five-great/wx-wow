@@ -1,6 +1,6 @@
 {
   "name": "wx-wow",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "description": "A CSS animation library is displayed when scrolling down the page.This project provides a convenient and easy-to-use animation implementation scheme for wechat Mini Program. By adding a simple animation class name and some simple parameters, the desired animation effect can be achieved.",
   "miniprogram": "dist",
   "main": "./index.js",
