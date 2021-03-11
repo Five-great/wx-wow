@@ -1,7 +1,133 @@
-function setWatcher(a){observe(a,"data",function(c,b,f){var d=this;if("data.wxwow"==c)return 0;setTimeout(function(){ScrollFunc(d)},200)},!0,a,"data")}
-function observe(a,c,b,f,d,e){var g=a[c];f&&null!=g&&"object"===typeof g&&Object.keys(g).forEach(function(h){"__webviewId__"!=h&&"Object"!=h&&"$fv_wxWoWDataObserve"!=h&&"$fv_wxWoW"!=h&&observe(g,h,b,f,d,e+"."+h)});Object.defineProperty(a,c,{configurable:!0,enumerable:!0,set:function(h){b.call(d,e,h,g);g=h;f&&null!=g&&"object"===typeof g&&observe(a,c,b,f,d,e)},get:function(){return g}})}
-var ResetFunc=function(a,c){a.data.$fv_wxWoW.oldlist=[];a.setData({wxwow:{state:c,prefix:a.data.wxwow.prefix}})},ScrollFunc=function(a){wx.createSelectorQuery().selectAll(".wx-wow").boundingClientRect(".wx-wow").exec(function(c){"object"==typeof c[0]&&c[0].forEach(function(b){var f=b.dataset.wxWowId,d=b.dataset.wxWowOffset?parseInt(b.dataset.wxWowOffset):0;a.data.$fv_wxwowHeight-d>b.top&&-1==a.data.$fv_wxWoW.oldlist.indexOf(f)&&(a.data.$fv_wxWoW.oldlist.push(f),a.data.$fv_wxWoW.maxIndex<f?a.data.$fv_wxWoW.maxIndex=
-f:"",a.data.wxwow={idx:".wowId-"+f,name:b.dataset.wxWowName?b.dataset.wxWowName:"",prefix:"animated",delayTime:b.dataset.wxWowDelay?b.dataset.wxWowDelay:"",durationTime:b.dataset.wxWowDuration?b.dataset.wxWowDuration:"",iteration:b.dataset.wxWowIteration?b.dataset.wxWowIteration:"",maxidx:a.data.$fv_wxWoW.maxIndex},a.setData({wxwow:a.data.wxwow}))})})},$FV_WXWOW={OnLoadFunc:function(a){var c=this;wx.getSystemInfo({success:function(b){c.setData({$fv_wxwowHeight:b.screenHeight,$fv_wxwowWidth:b.screenWidth,
-$fv_wxWoWDataObserve:null,$fv_wxWoWDataObserved:!1,$fv_wxWoW:{oldlist:[],maxIndex:0},wxwow:{}});setWatcher(c)}})},OnHideFunc:function(a){this.data.wxwowConfig&&!this.data.wxwowConfig.repeat?ResetFunc(this,"RESET-REPEAT"):ResetFunc(this,"RESET")},OnShowFunc:function(a){var c=this;c.data.wxwowConfig&&!c.data.wxwowConfig.repeat?"":setTimeout(function(){ScrollFunc(c)},200)},OnPageScrollFunc:function(a){ScrollFunc(this)}},$fv_wowPage=Page;
-module.exports=function(a){var c=a.onPageScroll,b=a.onShow,f=a.onHide;a.onLoad=function(d){return function(e){"function"==typeof $FV_WXWOW.OnLoadFunc&&$FV_WXWOW.OnLoadFunc.call(this,e);d&&d.call(this,e)}}(a.onLoad);a.onShow=function(d){return function(e){"function"==typeof $FV_WXWOW.OnShowFunc&&$FV_WXWOW.OnShowFunc.call(this,e);d&&d.call(this,e)}}(b);a.onHide=function(d){return function(e){"function"==typeof $FV_WXWOW.OnHideFunc&&$FV_WXWOW.OnHideFunc.call(this,e);d&&d.call(this,e)}}(f);a.onPageScroll=
-function(d){return function(e){"function"==typeof $FV_WXWOW.OnPageScrollFunc&&$FV_WXWOW.OnPageScrollFunc.call(this,e.scrollTop);d&&d.call(this,e)}}(c);return $fv_wowPage.call(this,a)};
+
+function setWatcher(page) {
+    let data = page.data;
+    let watchFun = function( fullName, value, oldValue){
+      if(fullName == 'data.wxwow'){ 
+          return 0;
+      }
+      setTimeout(()=>{ ScrollFunc(this)},200);
+    }
+   let deep = true; // 若未设置deep,则为undefine
+   observe(page, 'data', watchFun, deep, page, 'data');
+    
+  }
+  /**
+   * 监听属性 并执行监听函数
+   */
+  function observe(obj, key, watchFun, deep, page, fullName) {
+    var val = obj[key];
+    if (deep && val != null && typeof val === 'object') {
+      Object.keys(val).forEach(childKey => {
+        if(childKey == '__webviewId__' || childKey == 'Object'|| childKey == '$fv_wxWoWDataObserve' || childKey == '$fv_wxWoW') return;
+        observe(val, childKey, watchFun, deep, page, fullName+'.'+childKey); // 递归调用监听函数
+      })
+    }
+    Object.defineProperty(obj, key, {
+      configurable: true,
+      enumerable: true,
+      set: function (value) {
+        watchFun.call( page, fullName, value, val); 
+        val = value;
+        if ( deep && val != null && typeof val === 'object') { 
+          observe(obj, key, watchFun, deep, page, fullName);
+        }
+      },
+      get: function () {
+        return val;
+      }
+    })
+  }
+  var ResetFunc = function(_this, _state){
+    let $fv_that = _this;
+    $fv_that.data.$fv_wxWoW.oldlist = [];
+    $fv_that.setData({wxwow: { state: _state , prefix: $fv_that.data.wxwow.prefix} });
+  }
+  var ScrollFunc = function(_this){
+    let $fv_that = _this ;
+    let query = wx.createSelectorQuery();
+    query.selectAll('.wx-wow').boundingClientRect('.wx-wow').exec( function(res){
+        typeof res[0] == 'object' && res[0].forEach((ele) =>{
+          let idx = ele.dataset.wxWowId;
+          let offset = ele.dataset.wxWowOffset ? parseInt( ele.dataset.wxWowOffset /1500 * $fv_that.data.$fv_wxwowHeight ) : 0;
+          if($fv_that.data.$fv_wxwowHeight-offset > ele.top && !($fv_that.data.$fv_wxWoW.oldlist.indexOf(idx)!=-1)){ 
+           $fv_that.data.$fv_wxWoW.oldlist.push(idx);
+           $fv_that.data.$fv_wxWoW.maxIndex < idx ?$fv_that.data.$fv_wxWoW.maxIndex=idx :'';
+           let name =  ele.dataset.wxWowName ? ele.dataset.wxWowName : '';
+           let delayTime =  ele.dataset.wxWowDelay? ele.dataset.wxWowDelay : '';
+           let durationTime = ele.dataset.wxWowDuration ? ele.dataset.wxWowDuration : '' ; 
+           let  iteration = ele.dataset.wxWowIteration ? ele.dataset.wxWowIteration : '' ;
+            $fv_that.data.wxwow = { idx: '.wowId-'+idx,name: name,prefix: 'animated', delayTime, durationTime, iteration, maxidx: $fv_that.data.$fv_wxWoW.maxIndex };
+            $fv_that.setData({wxwow: $fv_that.data.wxwow });
+          }
+        })
+    })
+  }
+  const $FV_WXWOW ={
+    OnLoadFunc: function(e){
+      let $fv_that = this;
+      // 获取系统信息
+        wx.getSystemInfo({
+           success: function (res) {
+          $fv_that.setData({
+            $fv_wxwowHeight: res.screenHeight,
+            $fv_wxwowWidth: res.screenWidth,
+            $fv_wxWoWDataObserve: null,
+            $fv_wxWoWDataObserved: false,
+            $fv_wxWoW: {oldlist:[],maxIndex:0},
+            wxwow: {},
+          });
+         setWatcher($fv_that);
+        }
+      });
+     
+    },
+    OnHideFunc: function(e){
+      let $fv_that = this;
+      $fv_that.data.wxwowConfig && !$fv_that.data.wxwowConfig.repeat? ResetFunc($fv_that,'RESET-REPEAT') : ResetFunc($fv_that, 'RESET');
+    
+    },
+    OnShowFunc: function(e){
+      let $fv_that = this;
+      $fv_that.data.wxwowConfig && !$fv_that.data.wxwowConfig.repeat ? '' : setTimeout(()=>{ScrollFunc($fv_that)}, 200);
+    },
+    OnPageScrollFunc: function(e){
+      let $fv_that = this;
+      ScrollFunc($fv_that);
+    }
+  }
+
+  const $fv_wowPage = Page;
+
+  module.exports = function(e) {
+    let {
+      onPageScroll,
+      onLoad,
+      onShow,
+      onHide
+    } = e;
+   e.onLoad =(onLoad => {
+     return function (_e) {
+      typeof $FV_WXWOW.OnLoadFunc == 'function' && $FV_WXWOW.OnLoadFunc.call(this, _e);
+      onLoad && onLoad.call(this, _e);
+     }
+   })(onLoad);
+   e.onShow =(onShow => {
+    return function (_e) {
+     typeof $FV_WXWOW.OnShowFunc == 'function' && $FV_WXWOW.OnShowFunc.call(this, _e);
+     onShow && onShow.call(this, _e); 
+    }
+  })(onShow);
+  e.onHide =(onHide => {
+    return function (_e) {
+     typeof $FV_WXWOW.OnHideFunc == 'function' && $FV_WXWOW.OnHideFunc.call(this, _e);
+     onHide && onHide.call(this, _e);
+    }
+  })(onHide);
+    e.onPageScroll = (onPageScroll => {
+      return function (_e) {
+        typeof $FV_WXWOW.OnPageScrollFunc == 'function' && $FV_WXWOW.OnPageScrollFunc.call(this, _e.scrollTop);
+        onPageScroll && onPageScroll.call(this, _e);
+      }
+    })(onPageScroll);
+    return $fv_wowPage.call(this, e)
+  }
